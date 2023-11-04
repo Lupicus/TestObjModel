@@ -1,0 +1,3 @@
+newmtl m_test_obj
+map_Kd testobjmodel:block/test_obj 
+newmtl none

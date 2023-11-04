@@ -1,0 +1,22 @@
+modLoader="javafml"
+loaderVersion="[46,)"
+license="MIT License"
+#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
+[[mods]]
+modId="testobjmodel"
+version="1.0.0"
+displayName="Test ObjModel Mod"
+authors="Lupicus"
+description='''Used to test ObjModel texture'''
+[[dependencies.testobjmodel]]
+    modId="forge"
+    mandatory=true
+    versionRange="[46,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.testobjmodel]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20,1.21)"
+    ordering="NONE"
+    side="BOTH"
