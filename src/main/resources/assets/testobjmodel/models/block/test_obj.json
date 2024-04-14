@@ -4,6 +4,7 @@
   "flip_v": true,
   "parent": "block/block",
   "textures": {
+      "texture0": "testobjmodel:block/test_obj",
       "particle": "testobjmodel:block/test_obj"
   }
 }
