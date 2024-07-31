@@ -1,8 +1,6 @@
 {
   "pack": {
-    "description": {
-      "text": "TestObjModel resources"
-    },
-    "pack_format": 18
+    "description": "TestObjModel resources",
+    "pack_format": 34
   }
 }
