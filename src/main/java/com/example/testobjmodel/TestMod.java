@@ -27,8 +27,8 @@ public class TestMod
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
-    public static final RegistryObject<Block> TEST_OBJ_BLOCK = BLOCKS.register("test_obj", () -> new Block(BlockBehaviour.Properties.of().noOcclusion().mapColor(MapColor.STONE)));
-    public static final RegistryObject<Item> TEST_OBJ_ITEM = ITEMS.register("test_obj", () -> new BlockItem(TEST_OBJ_BLOCK.get(), new Item.Properties()));
+    public static final RegistryObject<Block> TEST_OBJ_BLOCK = BLOCKS.register("test_obj", () -> new Block(BlockBehaviour.Properties.of().noOcclusion().mapColor(MapColor.STONE).setId(BLOCKS.key("test_obj"))));
+    public static final RegistryObject<Item> TEST_OBJ_ITEM = ITEMS.register("test_obj", () -> new BlockItem(TEST_OBJ_BLOCK.get(), new Item.Properties().useBlockDescriptionPrefix().setId(ITEMS.key("test_obj"))));
     public static final RegistryObject<CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("test_blocks", () -> CreativeModeTab.builder()
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .title(Component.translatable("itemGroup.test_blocks"))
@@ -37,9 +37,9 @@ public class TestMod
                 output.accept(TEST_OBJ_ITEM.get());
             }).build());
 
-    public TestMod()
+    public TestMod(FMLJavaModLoadingContext context)
     {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        IEventBus modEventBus = context.getModEventBus();
 
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
