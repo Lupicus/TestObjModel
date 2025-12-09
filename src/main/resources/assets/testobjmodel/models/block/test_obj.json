@@ -6,5 +6,8 @@
   "textures": {
       "texture0": "testobjmodel:block/test_obj",
       "particle": "testobjmodel:block/test_obj"
-  }
+  },
+  "ambientocclusion": true,
+  "gui_light": "side",
+  "elements": []
 }
